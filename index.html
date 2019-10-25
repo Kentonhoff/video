@@ -121,25 +121,26 @@ let vol= document.querySelector('#volume');
 
 
 	function gray() {
-		console.log("In grayscale")
-		vid.classList.add("grayscale")
+		console.log("In grayscale");
+		vid.classList.add("grayscale");
 		// Utilize the existing grayscale class.
 
 	}
 
 	function color() {
-		console.log("In color")
-		vid.classList.remove("grayscale")
+		console.log("In color");
+		vid.classList.remove("grayscale");
 		// Remove the existing grayscale class.
 
 	}
 
 	// Not sure if we can test for this???
 	function random(){
-		var declaration = document.styleSheets[0].cssRules[0].style
+		var declaration = document.styleSheets[0].cssRules[0].style;
 		newNum = (Math.random() *100);
 		declaration.setProperty("filter","grayscale("+newNum+"%)");
-		declaration.setProperty("transform", "rotate("+newNum+")");
+		declaration.setProperty("transform","rotate("+newNum+"deg)");
+		console.log("Grayscale and rotate are "+newNum);
 		// Use setProperty to change the grayscale filder and transform properties of the video.
 		// Log what the new values are to the console.
 	}
