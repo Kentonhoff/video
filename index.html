@@ -136,6 +136,10 @@ let vol= document.querySelector('#volume');
 
 	// Not sure if we can test for this???
 	function random(){
+		var declaration = document.styleSheets[0].cssRules[0].style
+		newNum = (Math.random() *100);
+		declaration.setProperty("filter","grayscale("+newNum+"%)");
+		declaration.setProperty("transform", "rotate("+newNum+")");
 		// Use setProperty to change the grayscale filder and transform properties of the video.
 		// Log what the new values are to the console.
 	}
