@@ -20,6 +20,24 @@
 		button{
 			margin-bottom: 5px;
 		}
+		button.play{
+			background-image: url(images/play-button.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			height: 50px;
+			width: 80px;
+			background-position: center;
+			background-color: transparent;
+		}
+		button.pause{
+			background-image: url(images/pause-button.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			height: 50px;
+			width: 80px;
+			background-position: center;
+			background-color: transparent;
+		}
 
 		/*You can not change anything in the style tag other than to add images for the buttons. */
 </style>
@@ -109,7 +127,7 @@ let vol= document.querySelector('#volume');
 	}
 
 	volumeSlider.oninput = function() {
-		console.log(this.value);
+		/*console.log(this.value);*/
 		// Change the volume (0 is off, 100 is full volume, everything else is proportionally in between)
 		// Make sure to update the volume element.
 		// Update the console log with the new volume as well.
